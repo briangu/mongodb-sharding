@@ -12,7 +12,7 @@ services:
       TERM: xterm
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/data1:/data/db
+      - /mnt/dv/mongodb-sharding/data1:/data/db
   mongors1n2:
     container_name: mongors1n2
     image: mongo
@@ -25,7 +25,7 @@ services:
       TERM: xterm
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/data2:/data/db
+      - /mnt/dv/mongodb-sharding/data2:/data/db
   mongors1n3:
     container_name: mongors1n3
     image: mongo
@@ -38,7 +38,7 @@ services:
       TERM: xterm
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/data3:/data/db
+      - /mnt/dv/mongodb-sharding/data3:/data/db
   mongors2n1:
     container_name: mongors2n1
     image: mongo
@@ -51,7 +51,7 @@ services:
       TERM: xterm
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/data4:/data/db
+      - /mnt/dv/mongodb-sharding/data4:/data/db
   mongors2n2:
     container_name: mongors2n2
     image: mongo
@@ -64,7 +64,7 @@ services:
       TERM: xterm
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/data5:/data/db
+      - /mnt/dv/mongodb-sharding/data5:/data/db
   mongors2n3:
     container_name: mongors2n3
     image: mongo
@@ -77,7 +77,7 @@ services:
       TERM: xterm
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/data6:/data/db
+      - /mnt/dv/mongodb-sharding/data6:/data/db
   mongocfg1:
     container_name: mongocfg1
     image: mongo
@@ -88,7 +88,7 @@ services:
       - "27017"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/config1:/data/db
+      - /mnt/dv/mongodb-sharding/config1:/data/db
   mongocfg2:
     container_name: mongocfg2
     image: mongo
@@ -99,7 +99,7 @@ services:
       - "27017"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/config2:/data/db
+      - /mnt/dv/mongodb-sharding/config2:/data/db
   mongocfg3:
     container_name: mongocfg3
     image: mongo
@@ -110,7 +110,7 @@ services:
       - "27017"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mongo_cluster/config3:/data/db
+      - /mnt/dv/mongodb-sharding/config3:/data/db
   mongos1:
     container_name: mongos1
     image: mongo
@@ -137,3 +137,4 @@ services:
       - "27017"
     volumes:
       - /etc/localtime:/etc/localtime:ro
+
